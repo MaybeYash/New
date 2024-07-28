@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create or Add Wallet</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .option {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .option:hover {
+            background-color: #333;
+        }
+        .option .icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .option .text {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="option" onclick="createNewWallet()">
+            <div class="icon">➕</div>
+            <div class="text">Create new wallet</div>
+            <div class="subtext">Secret phrase or Swift wallet</div>
+        </div>
+        <div class="option" onclick="addExistingWallet()">
+            <div class="icon">⬇️</div>
+            <div class="text">Add existing wallet</div>
+            <div class="subtext">Import, restore or view-only</div>
+        </div>
+    </div>
+    <script>
+        function createNewWallet() {
+            alert("Create new wallet clicked");
+        }
+        function addExistingWallet() {
+            alert("Add existing wallet clicked");
+        }
+    </script>
+</body>
+</html>
