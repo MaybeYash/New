@@ -35,12 +35,13 @@
         }
         .subtext {
             font-size: 16px;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
         .checkbox-container {
             display: flex;
             align-items: center;
-            margin-bottom: 40px;
+            justify-content: center;
+            margin-bottom: 20px;
         }
         .checkbox-container input {
             margin-right: 10px;
@@ -54,6 +55,7 @@
             cursor: pointer;
             border-radius: 25px;
             transition: background-color 0.3s ease;
+            margin-bottom: 10px;
         }
         .button:disabled {
             background-color: #333;
@@ -67,18 +69,18 @@
 <body>
     <div class="container">
         <div class="image">
-            <img src="/mnt/data/file-gAnufJAxvSPHLgueMNo9SPQG" alt="Wallet Image">
+            <img src="/mnt/data/file-pMvDF5w3afwymYnLKBVGzduq" alt="Wallet Image">
         </div>
         <div class="text">Create a new wallet</div>
         <div class="subtext">
-            In the next step you'll see a phrase made of 12 words. This phrase is the key to your wallet.<br><br>
+            In the next step you'll see a phrase made of 12 words. This phrase is the key to your wallet. <br><br>
             If your device is lost or stolen, this phrase will allow you to recover your wallet and funds.
         </div>
         <div class="checkbox-container">
-            <input type="checkbox" id="agreement" onchange="toggleButton()">
+            <input type="checkbox" id="agreement" onclick="toggleButton()">
             <label for="agreement">I understand that if I lose my secret words, I will not be able to access my wallet</label>
         </div>
-        <button class="button" id="continueButton" disabled onclick="continueToNextStep()">I'll do this later</button>
+        <button class="button" id="continueButton" disabled onclick="continueToNextStep()">Continue</button>
     </div>
     <script>
         function toggleButton() {
@@ -86,8 +88,9 @@
             const button = document.getElementById('continueButton');
             button.disabled = !checkBox.checked;
         }
+
         function continueToNextStep() {
-            alert("Continue to the next step clicked");
+            window.location.href = "backup_wallet.html";
         }
     </script>
 </body>
