@@ -45,7 +45,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="option" onclick="createNewWallet()">
+        <div class="option" onclick="showCreateWalletPage()">
             <div class="icon">➕</div>
             <div class="text">Create new wallet</div>
             <div class="subtext">Secret phrase or Swift wallet</div>
@@ -57,8 +57,8 @@
         </div>
     </div>
     <script>
-        function createNewWallet() {
-            alert("Create new wallet clicked");
+        function showCreateWalletPage() {
+            window.location.href = "create_wallet.html";
         }
         function addExistingWallet() {
             alert("Add existing wallet clicked");
